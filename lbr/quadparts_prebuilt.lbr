@@ -4067,6 +4067,36 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 </technology>
 </technologies>
 </device>
+<device name="SMD-2012-0805-16" package="RESC2012X60_HS">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIST" value="Digikey"/>
+<attribute name="DISTPN" value="311-16.0CRCT-ND"/>
+<attribute name="MFR" value="Yageo"/>
+<attribute name="MPN" value=" RC0805FR-0716RL"/>
+<attribute name="VALUE" value="16"/>
+</technology>
+</technologies>
+</device>
+<device name="SMD-2012-0805-43.0" package="RESC2012X60_HS">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIST" value="Digikey"/>
+<attribute name="DISTPN" value="311-43.0CRCT-ND"/>
+<attribute name="MFR" value="Yageo"/>
+<attribute name="MPN" value="RC0805FR-0743RL"/>
+<attribute name="VALUE" value="43.0"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="SIP-10_" prefix="J" uservalue="yes">
