@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -4067,7 +4067,7 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 </technology>
 </technologies>
 </device>
-<device name="SMD-2012-0805-16" package="RESC2012X60_HS">
+<device name="SMD-2012-0805-10.7" package="RESC2012X60_HS">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -4075,14 +4075,14 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <technologies>
 <technology name="">
 <attribute name="DIST" value="Digikey"/>
-<attribute name="DISTPN" value="311-16.0CRCT-ND"/>
+<attribute name="DISTPN" value="311-10.7CRCT-ND"/>
 <attribute name="MFR" value="Yageo"/>
-<attribute name="MPN" value=" RC0805FR-0716RL"/>
-<attribute name="VALUE" value="16"/>
+<attribute name="MPN" value="RC0805FR-0710R7L"/>
+<attribute name="VALUE" value="10.7"/>
 </technology>
 </technologies>
 </device>
-<device name="SMD-2012-0805-43.0" package="RESC2012X60_HS">
+<device name="SMD-2012-0805-4.99" package="RESC2012X60_HS">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -4090,10 +4090,10 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <technologies>
 <technology name="">
 <attribute name="DIST" value="Digikey"/>
-<attribute name="DISTPN" value="311-43.0CRCT-ND"/>
+<attribute name="DISTPN" value="311-4.99CRCT-ND"/>
 <attribute name="MFR" value="Yageo"/>
-<attribute name="MPN" value="RC0805FR-0743RL"/>
-<attribute name="VALUE" value="43.0"/>
+<attribute name="MPN" value="RC0805FR-074R99L"/>
+<attribute name="VALUE" value="4.99"/>
 </technology>
 </technologies>
 </device>
