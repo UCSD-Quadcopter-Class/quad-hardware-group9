@@ -1,28 +1,30 @@
 LED_CIRCUIT_DESIGN_SPEC
 -------------------------------------------------------------------------------
-First, we started by picking an LED that would be interesting to implement. In 
-this case, the LTST-C19HE1WT RGB LED seemed interesting since it was fairly
-bright and compact.
+:: The previous design was changed due to a misunderstanding about using the ::
+:: light intensity per watt instead of using the typical intensity as lumens ::
 
-Since we wanted to have to be able to do as much as possible with the LED, we
-created a parallel array of 3 RGB LEDs that will be controlled by three MOSFET.
-[One for R, one for G, one for B]
+Now, the circuit uses three red and three royal blue LEDs. Both of these are
+considered high-power LEDs and therefore can be used to create a considerable
+amount of light. The datasheet is located in the LEDs folder as `creeinc_...`.
 
-Since a MOS does not take any current from the input source, a 10k resistor
-was used as a pull-down for the gate. To mitigate the effects of production
-differences, current-limiting resistors were placed on the cathodes of each
-LED's cathodes. The value for this current-limiting resistor was calculated
-using the assumption that 1) Vds is very tiny (~0); 2) the forward voltages
-were 2.1V, 3.35V, 3.35V for R,G,B LED segments, respectively; 3) the forward
-current for each of the LEDs is around 20mA. Values could simply be calculated
-through the equation,[3.7-(forward drop)]/.02, and rounded down to the nearest
-resistor value available. [We got values of 43, 16, and 16 Ohms for R,G,B, 
-respectively, after considering the effects of resistors on the brightness.]
+From here, I decided to place them in a MOS circuit to be able to control the
+brightness using a PWM pin. Since two LEDs would be running for any NMOS in
+saturation, the current draw while one is on would be 350mA. It's true that
+current draw would be 700mA max when both are on, but assuming I need both
+to be on, I could just flash them in sequence quickly to simulate the effect.
 
-Power could be checked quite quickly in this case. Since the current is known
-to be around 20mA, the power for each resistor is calculated using the following:
-(.02)(.02)(resistor val) = Power
-All of them gave values smaller than 1/8, the maximum power rating for the
-resistors.
+Resistance values were calculated using the general equation (and assuming that
+the Vds drop for the saturated MOS would be approx. 0V):
 
-NOTE: THE RESISTORS ARE OF THE SAME FAMILY AND THEREFORE USE THE SAME DATASHEET.
+    V_BAT - Vd
+    -----------
+     .175 mA
+
+where V_BAT is the battery voltage at any given moment (max is the most useful),
+and Vd is the drop accross the diode (something slightly higher than typical
+was used).
+
+One thing to note is that due to their typical current rating of 175mA, the
+resistors we generally use could not be used in this application. To remedy
+the problem, I introduced two new 1/2 W resistors so that the power dissipation
+would be well under the max power rating.
