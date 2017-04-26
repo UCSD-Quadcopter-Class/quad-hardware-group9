@@ -34,7 +34,7 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
@@ -979,6 +979,27 @@
 <wire x1="17.81" y1="7.334" x2="15.01" y2="7.334" width="0.2" layer="39"/>
 <wire x1="15.01" y1="7.334" x2="14.4" y2="8" width="0.2" layer="39"/>
 <wire x1="14.4" y1="8" x2="6" y2="8" width="0.2" layer="39"/>
+<text x="-32.3" y="14.6" size="1.778" layer="21" rot="R315">GND</text>
+<text x="-30.5" y="16.5" size="1.778" layer="21" rot="R315">BGND</text>
+<text x="-28.7" y="18.2" size="1.778" layer="21" rot="R315">VBAT</text>
+<text x="-26.7" y="19.9" size="1.778" layer="21" rot="R315">3V</text>
+<text x="-25" y="21.7" size="1.778" layer="21" rot="R315">PBR</text>
+<text x="-23.2" y="23.5" size="1.778" layer="21" rot="R315">PBL</text>
+<text x="-21.3" y="25.3" size="1.778" layer="21" rot="R315">PTR</text>
+<text x="-19.5" y="27.1" size="1.778" layer="21" rot="R315">PTL</text>
+<text x="-17.8" y="28.9" size="1.778" layer="21" rot="R315">SDA</text>
+<text x="-15.9" y="30.8" size="1.778" layer="21" rot="R315">SCL</text>
+<text x="-3.1" y="48.4" size="1.9304" layer="21">TL</text>
+<text x="50" y="-0.2" size="1.9304" layer="21" rot="R90">TR</text>
+<text x="-48.6" y="-3.1" size="1.9304" layer="21" rot="R90">BL</text>
+<text x="4.2" y="-48.5" size="1.9304" layer="21" rot="R180">BR</text>
+<text x="-18.8" y="-28.9" size="1.4224" layer="21" rot="R45">GND</text>
+<text x="-26" y="-21.7" size="1.4224" layer="21" rot="R45">RXI</text>
+<text x="-24.4" y="-23.5" size="1.4224" layer="21" rot="R45">TXO</text>
+<text x="23.1" y="-25.5" size="1.4224" layer="21" rot="R123">GND</text>
+<text x="12.4" y="-32.6" size="1.4224" layer="21" rot="R123">DTR</text>
+<text x="14.5" y="-31.2" size="1.4224" layer="21" rot="R123">RXI</text>
+<text x="16.8" y="-29.8" size="1.4224" layer="21" rot="R123">RXO</text>
 </plain>
 <libraries>
 <library name="quadparts_prebuilt">
@@ -3643,13 +3664,14 @@ design rules under a new name.</description>
 <attribute name="DIST" value="Digikey" x="27.853553125" y="19.853553125" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="ANT-2.45-CHP-T" x="27.853553125" y="19.853553125" size="1.778" layer="27" display="off"/>
 </element>
-<element name="B1" library="quadparts_prebuilt" package="BALUN" value="748421245" x="20.53" y="18.35" rot="R180">
+<element name="B1" library="quadparts_prebuilt" package="BALUN" value="748421245" x="20.53" y="18.35" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="732-2230-6-ND" x="20.53" y="18.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Wurth Electronics Inc" x="20.53" y="18.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="PRICE" value="2.63" x="20.53" y="18.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DATASHEET" value="http://katalog.we-online.de/pbs/datasheet/748421245.pdf" x="20.53" y="18.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="20.53" y="18.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="748421245" x="20.53" y="18.35" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="20.73" y="20.4" size="1.27" layer="25" font="vector" align="center"/>
 </element>
 <element name="BATT1" library="quadparts_prebuilt" package="BATTERY-W/HOLDER-380MAH-HUBSAN" value="BATTERY-HUBSAN-W/HOLDER" x="0" y="0" rot="MR135">
 <attribute name="DISTPN" value="http://www.amazon.com/dp/B00RROB6Q4?smid=AMNTPWSAB5H0S" x="0" y="0" size="1.778" layer="28" rot="MR135" display="off"/>
@@ -3658,161 +3680,239 @@ design rules under a new name.</description>
 <attribute name="CREATOR" value="Swanson" x="0" y="0" size="1.778" layer="28" rot="MR135" display="off"/>
 <attribute name="MPN" value="X4-H107C-8-in-1" x="0" y="0" size="1.778" layer="28" rot="MR135" display="off"/>
 </element>
-<element name="C1" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="18" y="9">
+<element name="C1" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="18" y="9" smashed="yes">
 <attribute name="DISTPN" value="490-4736-1-ND" x="18" y="9" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="18" y="9" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="18" y="9" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="GRM21BR71H105KA12L" x="18" y="9" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="18" y="9" size="0.92" layer="51" font="vector" ratio="10"/>
+<attribute name="NAME" x="19.6" y="9.4" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="19.7" y="8.1" size="1.2" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C10" library="quadparts_prebuilt" package="CAPMP7343X310_HS" value="220uF" x="4.5" y="-34" rot="R90">
+<element name="C10" library="quadparts_prebuilt" package="CAPMP7343X310_HS" value="220uF" x="4.5" y="-34" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="478-8912-1-ND" x="4.5" y="-34" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="AVX Corporation" x="4.5" y="-34" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="4.5" y="-34" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="TAJD227K006RNJ" x="4.5" y="-34" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="5" y="-35.5" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="8.2" y="-36.3" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="4.5" y="-34" size="2" layer="51" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C11" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="22pF" x="18.8" y="22.5" rot="R90">
+<element name="C11" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="22pF" x="18.8" y="22.5" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="490-5534-1-ND" x="18.8" y="22.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="18.8" y="22.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="18.8" y="22.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="GRM21A5C2E220JW01D" x="18.8" y="22.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="18.8" y="22.5" size="0.92" layer="51" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="18.6" y="24.6" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="20.1" y="24.6" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C12" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="0" y="30.5" rot="R90">
+<element name="C12" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="0" y="30.5" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="490-4736-1-ND" x="0" y="30.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="0" y="30.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="0" y="30.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="GRM21BR71H105KA12L" x="0" y="30.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="0" y="30.5" size="0.92" layer="51" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="-0.3" y="25.6" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="1.2" y="25.6" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C13" library="quadparts_prebuilt" package="CAPMP7343X310_HS" value="220uF" x="-4.5" y="34" rot="R270">
+<element name="C13" library="quadparts_prebuilt" package="CAPMP7343X310_HS" value="220uF" x="-4.5" y="34" smashed="yes" rot="R270">
 <attribute name="DISTPN" value="478-8912-1-ND" x="-4.5" y="34" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFR" value="AVX Corporation" x="-4.5" y="34" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIST" value="Digikey" x="-4.5" y="34" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="TAJD227K006RNJ" x="-4.5" y="34" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="-5.1" y="35.7" size="1.2" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="-8.6" y="37.4" size="1.2" layer="27" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="-4.5" y="34" size="2" layer="51" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="C14" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="0.5" y="-31" rot="R270">
+<element name="C14" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="0.5" y="-31" smashed="yes" rot="R270">
 <attribute name="DISTPN" value="490-4736-1-ND" x="0.5" y="-31" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="0.5" y="-31" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIST" value="Digikey" x="0.5" y="-31" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="GRM21BR71H105KA12L" x="0.5" y="-31" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="0.5" y="-31" size="0.92" layer="51" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="-0.9" y="-26.2" size="1.2" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="0.4" y="-26.2" size="1.2" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="C15" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.1uF" x="16.4" y="-25.6" rot="R135">
+<element name="C15" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.1uF" x="16.4" y="-25.6" smashed="yes" rot="R135">
 <attribute name="DISTPN" value="490-1666-1-ND" x="16.4" y="-25.6" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="16.4" y="-25.6" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="DIST" value="Digikey" x="16.4" y="-25.6" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="MPN" value="GRM21BR71H104KA01L" x="16.4" y="-25.6" size="1.778" layer="27" rot="R135" display="off"/>
+<attribute name="NAME" x="16.4" y="-25.6" size="0.92" layer="51" font="vector" ratio="10" rot="R135"/>
+<attribute name="NAME" x="16.5" y="-23.6" size="1.2" layer="25" font="vector" ratio="10" rot="R135"/>
+<attribute name="VALUE" x="15.4" y="-24.5" size="1.2" layer="27" font="vector" ratio="10" rot="R135"/>
 </element>
-<element name="C16" library="quadparts_prebuilt" package="CAPMP7343X310_HS" value="220uF" x="33.5" y="4.5" rot="R180">
+<element name="C16" library="quadparts_prebuilt" package="CAPMP7343X310_HS" value="220uF" x="33.5" y="4.5" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="478-8912-1-ND" x="33.5" y="4.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="AVX Corporation" x="33.5" y="4.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="33.5" y="4.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="TAJD227K006RNJ" x="33.5" y="4.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="35.2" y="4.8" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="36.3" y="8.2" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="33.5" y="4.5" size="2" layer="51" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C17" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="-31" y="1" rot="R180">
+<element name="C17" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="-31" y="1" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="490-4736-1-ND" x="-31" y="1" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="-31" y="1" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="-31" y="1" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="GRM21BR71H105KA12L" x="-31" y="1" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="-31" y="1" size="0.92" layer="51" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="-26.1" y="2.2" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-26.1" y="0.9" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C18" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.1uF" x="-2" y="5.5" rot="R90">
+<element name="C18" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.1uF" x="-2" y="5.5" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="490-1666-1-ND" x="-2" y="5.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="-2" y="5.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="-2" y="5.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="GRM21BR71H104KA01L" x="-2" y="5.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="-2" y="5.5" size="0.92" layer="51" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="-2.6" y="7" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="-1.3" y="7" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C19" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.1uF" x="-5.5" y="5" rot="R180">
+<element name="C19" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.1uF" x="-5.5" y="5" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="490-1666-1-ND" x="-5.5" y="5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="-5.5" y="5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="-5.5" y="5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="GRM21BR71H104KA01L" x="-5.5" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="-5.5" y="5" size="0.92" layer="51" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="-6.8" y="5.8" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-6.8" y="4.5" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C2" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="9.45" y="26.25">
+<element name="C2" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="9.45" y="26.25" smashed="yes">
 <attribute name="DISTPN" value="490-4736-1-ND" x="9.45" y="26.25" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="9.45" y="26.25" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="9.45" y="26.25" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="GRM21BR71H105KA12L" x="9.45" y="26.25" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="9.45" y="26.25" size="0.92" layer="51" font="vector" ratio="10"/>
+<attribute name="NAME" x="5.25" y="27.25" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="5.15" y="25.95" size="1.2" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C20" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="10uF" x="-5.5" y="7.5" rot="R180">
+<element name="C20" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="10uF" x="-5.5" y="7.5" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="490-5523-1-ND" x="-5.5" y="7.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="-5.5" y="7.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="-5.5" y="7.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="GRM21BR61E106KA73L" x="-5.5" y="7.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="-5.5" y="7.5" size="0.92" layer="51" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="-6.8" y="8.7" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-6.8" y="7.4" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C21" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.1uF" x="-5.5" y="-1.8" rot="R180">
+<element name="C21" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.1uF" x="-5.5" y="-1.8" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="490-1666-1-ND" x="-5.5" y="-1.8" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="-5.5" y="-1.8" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="-5.5" y="-1.8" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="GRM21BR71H104KA01L" x="-5.5" y="-1.8" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="-5.5" y="-1.8" size="0.92" layer="51" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="-6.8" y="-0.6" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-6.8" y="-1.9" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C22" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.01uF" x="1" y="5.5" rot="R90">
+<element name="C22" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.01uF" x="1" y="5.5" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="490-8295-1-ND" x="1" y="5.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="1" y="5.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="1" y="5.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="GRM2195C1H103FA01D" x="1" y="5.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="1" y="5.5" size="0.92" layer="51" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="1.9" y="7.1" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="3.4" y="5.2" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C3" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="3.35355625" y="-25.14644375" rot="R135">
+<element name="C3" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="3.35355625" y="-25.14644375" smashed="yes" rot="R135">
 <attribute name="DISTPN" value="490-4736-1-ND" x="3.35355625" y="-25.14644375" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="3.35355625" y="-25.14644375" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="DIST" value="Digikey" x="3.35355625" y="-25.14644375" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="MPN" value="GRM21BR71H105KA12L" x="3.35355625" y="-25.14644375" size="1.778" layer="27" rot="R135" display="off"/>
+<attribute name="NAME" x="3.35355625" y="-25.14644375" size="0.92" layer="51" font="vector" ratio="10" rot="R135"/>
+<attribute name="NAME" x="2.15355625" y="-22.64644375" size="1.2" layer="25" font="vector" ratio="10" rot="R135"/>
+<attribute name="VALUE" x="1.55355625" y="-23.84644375" size="1.2" layer="27" font="vector" ratio="10" rot="R135"/>
 </element>
-<element name="C4" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="7.6" y="-18.5" rot="R315">
+<element name="C4" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="7.6" y="-18.5" smashed="yes" rot="R315">
 <attribute name="DISTPN" value="490-4736-1-ND" x="7.6" y="-18.5" size="1.778" layer="27" rot="R315" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="7.6" y="-18.5" size="1.778" layer="27" rot="R315" display="off"/>
 <attribute name="DIST" value="Digikey" x="7.6" y="-18.5" size="1.778" layer="27" rot="R315" display="off"/>
 <attribute name="MPN" value="GRM21BR71H105KA12L" x="7.6" y="-18.5" size="1.778" layer="27" rot="R315" display="off"/>
+<attribute name="NAME" x="7.6" y="-18.5" size="0.92" layer="51" font="vector" ratio="10" rot="R315"/>
+<attribute name="NAME" x="4.5" y="-16.2" size="1.2" layer="25" font="vector" ratio="10" rot="R315"/>
+<attribute name="VALUE" x="7.7" y="-16.5" size="1.2" layer="27" font="vector" ratio="10" rot="R315"/>
 </element>
-<element name="C5" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="12pF" x="16.25" y="5.5" rot="R270">
+<element name="C5" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="12pF" x="16.25" y="5.5" smashed="yes" rot="R270">
 <attribute name="DISTPN" value="490-5531-1-ND" x="16.25" y="5.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="16.25" y="5.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIST" value="Digikey" x="16.25" y="5.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="GRM21A5C2E120JW01D" x="16.25" y="5.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="16.25" y="5.5" size="0.92" layer="51" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="15.35" y="4.2" size="1.2" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="13.95" y="6.4" size="1.2" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="C6" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="12pF" x="10.5" y="1.5">
+<element name="C6" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="12pF" x="10.5" y="1.5" smashed="yes">
 <attribute name="DISTPN" value="490-5531-1-ND" x="10.5" y="1.5" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="10.5" y="1.5" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="10.5" y="1.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="GRM21A5C2E120JW01D" x="10.5" y="1.5" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="10.5" y="1.5" size="0.92" layer="51" font="vector" ratio="10"/>
+<attribute name="NAME" x="8.6" y="-0.7" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="8.6" y="-2" size="1.2" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C7" library="quadparts_prebuilt" package="CAPMP7343X310_HS" value="220uF" x="-34" y="-3">
+<element name="C7" library="quadparts_prebuilt" package="CAPMP7343X310_HS" value="220uF" x="-34" y="-3" smashed="yes">
 <attribute name="DISTPN" value="478-8912-1-ND" x="-34" y="-3" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="AVX Corporation" x="-34" y="-3" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="-34" y="-3" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="TAJD227K006RNJ" x="-34" y="-3" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-34.9" y="-3.6" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="-36.8" y="-6.7" size="1.2" layer="27" font="vector" ratio="10"/>
+<attribute name="NAME" x="-34" y="-3" size="2" layer="51" font="vector" ratio="10"/>
 </element>
-<element name="C8" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="30.5" y="0">
+<element name="C8" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="1uF" x="30.5" y="0" smashed="yes">
 <attribute name="DISTPN" value="490-4736-1-ND" x="30.5" y="0" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="30.5" y="0" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="30.5" y="0" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="GRM21BR71H105KA12L" x="30.5" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="30.5" y="0" size="0.92" layer="51" font="vector" ratio="10"/>
+<attribute name="NAME" x="27" y="-0.4" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="25.9" y="-1.7" size="1.2" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C9" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.75pF" x="22.2" y="22.5" rot="R270">
+<element name="C9" library="quadparts_prebuilt" package="CAPC2012X140_HS" value="0.75pF" x="22.2" y="22.5" smashed="yes" rot="R270">
 <attribute name="DISTPN" value="490-3585-1-ND" x="22.2" y="22.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFR" value="Murata Electronics North America" x="22.2" y="22.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIST" value="Digikey" x="22.2" y="22.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="GQM2195C2AR75CB01D" x="22.2" y="22.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="22.2" y="22.5" size="0.92" layer="51" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="21.1" y="26.6" size="1.2" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="22.5" y="30.5" size="1.2" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="D1" library="quadparts_prebuilt" package="SOD3716X135_HS" value="360mV" x="41.3" y="0" rot="R270">
+<element name="D1" library="quadparts_prebuilt" package="SOD3716X135_HS" value="360mV" x="41.3" y="0" smashed="yes" rot="R270">
 <attribute name="DISTPN" value="CRS08QMCT-ND" x="41.3" y="0" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFR" value="Toshiba Semiconductor and Storage" x="41.3" y="0" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIST" value="Digikey" x="41.3" y="0" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="CRS08(TE85L,Q,M)" x="41.3" y="0" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="40.8" y="1.4" size="1.2" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="42.4" y="2.7" size="1.2" layer="27" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="41.3" y="0" size="1.32" layer="51" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="D2" library="quadparts_prebuilt" package="SOD3716X135_HS" value="360mV" x="0" y="41.5">
+<element name="D2" library="quadparts_prebuilt" package="SOD3716X135_HS" value="360mV" x="0" y="41.5" smashed="yes">
 <attribute name="DISTPN" value="CRS08QMCT-ND" x="0" y="41.5" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="Toshiba Semiconductor and Storage" x="0" y="41.5" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="0" y="41.5" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="CRS08(TE85L,Q,M)" x="0" y="41.5" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-1" y="41" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="-0.4" y="42.8" size="1.2" layer="27" font="vector" ratio="10"/>
+<attribute name="NAME" x="0" y="41.5" size="1.32" layer="51" font="vector" ratio="10"/>
 </element>
-<element name="D3" library="quadparts_prebuilt" package="SOD3716X135_HS" value="360mV" x="0" y="-42" rot="R180">
+<element name="D3" library="quadparts_prebuilt" package="SOD3716X135_HS" value="360mV" x="0" y="-42" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="CRS08QMCT-ND" x="0" y="-42" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Toshiba Semiconductor and Storage" x="0" y="-42" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="0" y="-42" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="CRS08(TE85L,Q,M)" x="0" y="-42" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="1.2" y="-41.4" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="3.2" y="-42.9" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="0" y="-42" size="1.32" layer="51" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="D4" library="quadparts_prebuilt" package="SOD3716X135_HS" value="360mV" x="-42" y="0" rot="R90">
+<element name="D4" library="quadparts_prebuilt" package="SOD3716X135_HS" value="360mV" x="-42" y="0" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="CRS08QMCT-ND" x="-42" y="0" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Toshiba Semiconductor and Storage" x="-42" y="0" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="-42" y="0" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="CRS08(TE85L,Q,M)" x="-42" y="0" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="-41.4" y="-0.9" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="-43.1" y="-0.6" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="-42" y="0" size="1.32" layer="51" font="vector" ratio="10" rot="R90"/>
 </element>
 <element name="D5" library="LEDS" package="XQ-A-1616" value="RED" x="34.1830125" y="-13.316984375" rot="MR210">
 <attribute name="DISTPN" value="XQARED-02-0000-000000W01CT-ND" x="34.1830125" y="-13.316984375" size="1.778" layer="28" rot="MR210" display="off"/>
@@ -3842,30 +3942,37 @@ design rules under a new name.</description>
 <attribute name="CREATOR" value="BRIAN" x="12.058803125" y="36.117315625" size="1.778" layer="28" rot="MR22.5" display="off"/>
 <attribute name="MPN" value="XQAROY-02-0000-000000601" x="12.058803125" y="36.117315625" size="1.778" layer="28" rot="MR22.5" display="off"/>
 </element>
-<element name="J1" library="quadparts_prebuilt" package="2X3-NS" value="ISP" x="-17.4224125" y="17.555071875" rot="R45">
+<element name="J1" library="quadparts_prebuilt" package="2X3-NS" value="ISP" x="-17.4224125" y="17.555071875" smashed="yes" rot="R45">
 <attribute name="DISTPN" value="609-3234-ND" x="-17.4224125" y="17.555071875" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MFR" value="Amphenol FCI" x="-17.4224125" y="17.555071875" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="PRICE" value="0.31" x="-17.4224125" y="17.555071875" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="DATASHEET" value="http://portal.fciconnect.com/Comergent//fci/drawing/67996.pdf" x="-17.4224125" y="17.555071875" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="DIST" value="Digikey" x="-17.4224125" y="17.555071875" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MPN" value="67997-206HLF" x="-17.4224125" y="17.555071875" size="1.778" layer="27" rot="R45" display="off"/>
+<attribute name="VALUE" x="-16.973396875" y="11.717903125" size="1.27" layer="27" font="vector" rot="R45"/>
+<attribute name="NAME" x="-15.961553125" y="10.50605625" size="1.27" layer="25" font="vector" ratio="10" rot="R45"/>
 </element>
-<element name="J2" library="quadparts_prebuilt" package="HDRV10W63P254_10X1_2540X254H838_HS" value="" x="-16.5" y="32.5" rot="R225">
+<element name="J2" library="quadparts_prebuilt" package="HDRV10W63P254_10X1_2540X254H838_HS" value="" x="-16.5" y="32.5" smashed="yes" rot="R225">
 <attribute name="DISTPN" value="609-3250-ND" x="-16.5" y="32.5" size="1.778" layer="27" rot="R225" display="off"/>
 <attribute name="MFR" value="Amphenol FCI" x="-16.5" y="32.5" size="1.778" layer="27" rot="R225" display="off"/>
 <attribute name="PRICE" value="0.55" x="-16.5" y="32.5" size="1.778" layer="27" rot="R225" display="off"/>
 <attribute name="DATASHEET" value="http://portal.fciconnect.com/Comergent//fci/drawing/68000.pdf" x="-16.5" y="32.5" size="1.778" layer="27" rot="R225" display="off"/>
 <attribute name="DIST" value="Digikey" x="-16.5" y="32.5" size="1.778" layer="27" rot="R225" display="off"/>
 <attribute name="MPN" value="68000-110HLF" x="-16.5" y="32.5" size="1.778" layer="27" rot="R225" display="off"/>
+<attribute name="NAME" x="-14.082228125" y="35.81776875" size="1.2" layer="25" font="vector" ratio="10" rot="R225"/>
+<attribute name="VALUE" x="-24.582228125" y="24.41776875" size="1.2" layer="27" font="vector" ratio="10" rot="R225"/>
+<attribute name="NAME" x="-24.582228125" y="24.41776875" size="2" layer="51" font="vector" ratio="10" rot="R225"/>
 </element>
-<element name="J3" library="quadparts" package="MALE_HEADER_2X1_0.1IN" value="JUMPER" x="28.083496875" y="-22.28310625" rot="MR122">
+<element name="J3" library="quadparts" package="MALE_HEADER_2X1_0.1IN" value="JUMPER" x="28.083496875" y="-22.28310625" smashed="yes" rot="MR122">
 <attribute name="DISTPN" value="3M9447-ND" x="28.083496875" y="-22.28310625" size="1.778" layer="28" rot="MR122" display="off"/>
 <attribute name="MFR" value="3M" x="28.083496875" y="-22.28310625" size="1.778" layer="28" rot="MR122" display="off"/>
 <attribute name="DIST" value="Digikey" x="28.083496875" y="-22.28310625" size="1.778" layer="28" rot="MR122" display="off"/>
 <attribute name="CREATOR" value="SWANSON" x="28.083496875" y="-22.28310625" size="1.778" layer="28" rot="MR122" display="off"/>
 <attribute name="MPN" value="961102-6404-AR" x="28.083496875" y="-22.28310625" size="1.778" layer="28" rot="MR122" display="off"/>
+<attribute name="VALUE" x="29.01525" y="-24.24308125" size="1.2" layer="28" font="vector" ratio="10" rot="MR122"/>
+<attribute name="NAME" x="24.50635625" y="-20.998053125" size="2" layer="52" font="vector" ratio="10" rot="MR122"/>
 </element>
-<element name="JP1" library="quadparts_prebuilt" package="FTDI_BASIC" value="FTDI_BASICPTH" x="12.6" y="-34" rot="R33">
+<element name="JP1" library="quadparts_prebuilt" package="FTDI_BASIC" value="FTDI_BASICPTH" x="12.6" y="-34" smashed="yes" rot="R33">
 <attribute name="DISTPN" value="609-3327-ND" x="12.6" y="-34" size="1.778" layer="27" rot="R33" display="off"/>
 <attribute name="MFR" value="Amphenol FCI" x="12.6" y="-34" size="1.778" layer="27" rot="R33" display="off"/>
 <attribute name="PRICE" value="0.33" x="12.6" y="-34" size="1.778" layer="27" rot="R33" display="off"/>
@@ -3873,7 +3980,7 @@ design rules under a new name.</description>
 <attribute name="DIST" value="Digikey" x="12.6" y="-34" size="1.778" layer="27" rot="R33" display="off"/>
 <attribute name="MPN" value="68016-406HLF" x="12.6" y="-34" size="1.778" layer="27" rot="R33" display="off"/>
 </element>
-<element name="JP2" library="quadparts_prebuilt" package="FTDI_BASIC" value="FTDI_BASICPTH" x="-29.5" y="-20.5" rot="R315">
+<element name="JP2" library="quadparts_prebuilt" package="FTDI_BASIC" value="FTDI_BASICPTH" x="-29.5" y="-20.5" smashed="yes" rot="R315">
 <attribute name="DISTPN" value="609-3327-ND" x="-29.5" y="-20.5" size="1.778" layer="27" rot="R315" display="off"/>
 <attribute name="MFR" value="Amphenol FCI" x="-29.5" y="-20.5" size="1.778" layer="27" rot="R315" display="off"/>
 <attribute name="PRICE" value="0.33" x="-29.5" y="-20.5" size="1.778" layer="27" rot="R315" display="off"/>
@@ -3881,17 +3988,23 @@ design rules under a new name.</description>
 <attribute name="DIST" value="Digikey" x="-29.5" y="-20.5" size="1.778" layer="27" rot="R315" display="off"/>
 <attribute name="MPN" value="68016-406HLF" x="-29.5" y="-20.5" size="1.778" layer="27" rot="R315" display="off"/>
 </element>
-<element name="LED2" library="quadparts_prebuilt" package="LEDSC125X200X120-2_HS" value="green" x="-19.7" y="-3.5" rot="R45">
+<element name="LED2" library="quadparts_prebuilt" package="LEDSC125X200X120-2_HS" value="green" x="-19.7" y="-3.5" smashed="yes" rot="R45">
 <attribute name="DISTPN" value="160-1179-1-ND" x="-19.7" y="-3.5" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MFR" value="Lite-On Inc" x="-19.7" y="-3.5" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="DIST" value="Digikey" x="-19.7" y="-3.5" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MPN" value="LTST-C170GKT" x="-19.7" y="-3.5" size="1.778" layer="27" rot="R45" display="off"/>
+<attribute name="NAME" x="-19.7" y="-3.5" size="0.87" layer="51" font="vector" ratio="10" rot="R45"/>
+<attribute name="NAME" x="-20.3" y="-7.3" size="1.2" layer="25" font="vector" ratio="10" rot="R45"/>
+<attribute name="VALUE" x="-19.5" y="-8.3" size="1.2" layer="27" font="vector" ratio="10" rot="R45"/>
 </element>
-<element name="LED3" library="quadparts_prebuilt" package="LEDSC125X200X120-2_HS" value="green" x="-21.6" y="-1.7" rot="R45">
+<element name="LED3" library="quadparts_prebuilt" package="LEDSC125X200X120-2_HS" value="green" x="-21.6" y="-1.7" smashed="yes" rot="R45">
 <attribute name="DISTPN" value="160-1179-1-ND" x="-21.6" y="-1.7" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MFR" value="Lite-On Inc" x="-21.6" y="-1.7" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="DIST" value="Digikey" x="-21.6" y="-1.7" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MPN" value="LTST-C170GKT" x="-21.6" y="-1.7" size="1.778" layer="27" rot="R45" display="off"/>
+<attribute name="NAME" x="-21.6" y="-1.7" size="0.87" layer="51" font="vector" ratio="10" rot="R45"/>
+<attribute name="NAME" x="-25.5" y="-2.2" size="1.2" layer="25" font="vector" ratio="10" rot="R45"/>
+<attribute name="VALUE" x="-24.8" y="-3.2" size="1.2" layer="27" font="vector" ratio="10" rot="R45"/>
 </element>
 <element name="LSM9DS1" library="quadparts" package="LSM9DS1_LGA24L" value="LSM9DS1_IMU" x="0" y="0">
 <attribute name="DISTPN" value="497-14946-1-ND" x="0" y="0" size="1.778" layer="27" display="off"/>
@@ -3942,41 +4055,59 @@ design rules under a new name.</description>
 <attribute name="CREATOR" value="BRIAN" x="15.039340625" y="32.0393375" size="1.778" layer="27" rot="R330" display="off"/>
 <attribute name="MPN" value="SI2302CDS-T1-E3" x="15.039340625" y="32.0393375" size="1.778" layer="27" rot="R330" display="off"/>
 </element>
-<element name="R1" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="12.6" y="26.9" rot="R90">
+<element name="R1" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="12.6" y="26.9" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="311-10KARCT-ND" x="12.6" y="26.9" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Yageo" x="12.6" y="26.9" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="12.6" y="26.9" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="RC0805JR-0710KL" x="12.6" y="26.9" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="12.6" y="26.9" size="0.87" layer="51" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="13.1" y="23.4" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="14.5" y="22.1" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="R10" library="quadparts_prebuilt" package="RESC2012X60_HS" value="100" x="-35.5" y="1">
+<element name="R10" library="quadparts_prebuilt" package="RESC2012X60_HS" value="100" x="-35.5" y="1" smashed="yes">
 <attribute name="DISTPN" value="311-100ARCT-ND" x="-35.5" y="1" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="Yageo" x="-35.5" y="1" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="-35.5" y="1" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="RC0805JR-07100RL" x="-35.5" y="1" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-35.5" y="1" size="0.87" layer="51" font="vector" ratio="10"/>
+<attribute name="NAME" x="-40.4" y="1.1" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="-40.5" y="-0.3" size="1.2" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="R11" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="-31" y="4" rot="R180">
+<element name="R11" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="-31" y="4" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="311-10KARCT-ND" x="-31" y="4" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Yageo" x="-31" y="4" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="-31" y="4" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="RC0805JR-0710KL" x="-31" y="4" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="-31" y="4" size="0.87" layer="51" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="-26.1" y="5.6" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-26.1" y="4.3" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="R12" library="quadparts_prebuilt" package="RESC2012X60_HS" value="330" x="-5" y="26.5" rot="R180">
+<element name="R12" library="quadparts_prebuilt" package="RESC2012X60_HS" value="330" x="-5" y="26.5" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="311-330ARCT-ND" x="-5" y="26.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Yageo" x="-5" y="26.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="-5" y="26.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="RC0805JR-07330RL" x="-5" y="26.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="-5" y="26.5" size="0.87" layer="51" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="-6.8" y="26.9" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-6.9" y="25.5" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="R13" library="quadparts_prebuilt" package="RESC2012X60_HS" value="330" x="-5" y="22.5" rot="R180">
+<element name="R13" library="quadparts_prebuilt" package="RESC2012X60_HS" value="330" x="-5" y="22.5" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="311-330ARCT-ND" x="-5" y="22.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="Yageo" x="-5" y="22.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="Digikey" x="-5" y="22.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="RC0805JR-07330RL" x="-5" y="22.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="-5" y="22.5" size="0.87" layer="51" font="vector" ratio="10" rot="R180"/>
+<attribute name="NAME" x="-6.6" y="22.9" size="1.2" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-6.6" y="21.5" size="1.2" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="R14" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="7.5" y="31.5" rot="R90">
+<element name="R14" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="7.5" y="31.5" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="311-10KARCT-ND" x="7.5" y="31.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Yageo" x="7.5" y="31.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="7.5" y="31.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="RC0805JR-0710KL" x="7.5" y="31.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="7.5" y="31.5" size="0.87" layer="51" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="7.3" y="33.4" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="6.1" y="30.1" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
 <element name="R15" library="quadparts" package="PSC_RESIST_805_LR" value="5.1" x="-11" y="-30" rot="R252">
 <attribute name="DISTPN" value="P19237CT-ND" x="-11" y="-30" size="1.778" layer="27" rot="R252" display="off"/>
@@ -3985,11 +4116,14 @@ design rules under a new name.</description>
 <attribute name="CREATOR" value="BRIAN" x="-11" y="-30" size="1.778" layer="27" rot="R252" display="off"/>
 <attribute name="MPN" value="ERJ-6DQJ5R1V" x="-11" y="-30" size="1.778" layer="27" rot="R252" display="off"/>
 </element>
-<element name="R16" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="24.5" y="-8" rot="R60">
+<element name="R16" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="24.5" y="-8" smashed="yes" rot="R60">
 <attribute name="DISTPN" value="311-10KARCT-ND" x="24.5" y="-8" size="1.778" layer="27" rot="R60" display="off"/>
 <attribute name="MFR" value="Yageo" x="24.5" y="-8" size="1.778" layer="27" rot="R60" display="off"/>
 <attribute name="DIST" value="Digikey" x="24.5" y="-8" size="1.778" layer="27" rot="R60" display="off"/>
 <attribute name="MPN" value="RC0805JR-0710KL" x="24.5" y="-8" size="1.778" layer="27" rot="R60" display="off"/>
+<attribute name="NAME" x="24.5" y="-8" size="0.87" layer="51" font="vector" ratio="10" rot="R60"/>
+<attribute name="NAME" x="21.8" y="-12.4" size="1.2" layer="25" font="vector" ratio="10" rot="R60"/>
+<attribute name="VALUE" x="23.1" y="-13" size="1.2" layer="27" font="vector" ratio="10" rot="R60"/>
 </element>
 <element name="R17" library="quadparts" package="PSC_RESIST_805_LR" value="5.1" x="19.4" y="32.092890625" rot="R55">
 <attribute name="DISTPN" value="P19237CT-ND" x="19.4" y="32.092890625" size="1.778" layer="27" rot="R55" display="off"/>
@@ -4005,11 +4139,14 @@ design rules under a new name.</description>
 <attribute name="CREATOR" value="BRIAN" x="34" y="-9" size="1.778" layer="27" rot="R330" display="off"/>
 <attribute name="MPN" value="ERJ-P06J100V" x="34" y="-9" size="1.778" layer="27" rot="R330" display="off"/>
 </element>
-<element name="R2" library="quadparts_prebuilt" package="RESC2012X60_HS" value="100" x="35" y="0">
+<element name="R2" library="quadparts_prebuilt" package="RESC2012X60_HS" value="100" x="35" y="0" smashed="yes">
 <attribute name="DISTPN" value="311-100ARCT-ND" x="35" y="0" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="Yageo" x="35" y="0" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="35" y="0" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="RC0805JR-07100RL" x="35" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="35" y="0" size="0.87" layer="51" font="vector" ratio="10"/>
+<attribute name="NAME" x="36.2" y="0.9" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="32.8" y="0.9" size="1.2" layer="27" font="vector" ratio="10"/>
 </element>
 <element name="R20" library="quadparts" package="PSC_RESIST_805" value="10" x="-30.353553125" y="10.4393375" rot="R90">
 <attribute name="DISTPN" value="P10ADCT-ND" x="-30.353553125" y="10.4393375" size="1.778" layer="27" rot="R90" display="off"/>
@@ -4018,71 +4155,92 @@ design rules under a new name.</description>
 <attribute name="CREATOR" value="BRIAN" x="-30.353553125" y="10.4393375" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="ERJ-P06J100V" x="-30.353553125" y="10.4393375" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R3" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="31.5" y="-3">
+<element name="R3" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="31.5" y="-3" smashed="yes">
 <attribute name="DISTPN" value="311-10KARCT-ND" x="31.5" y="-3" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="Yageo" x="31.5" y="-3" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="Digikey" x="31.5" y="-3" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="RC0805JR-0710KL" x="31.5" y="-3" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="31.5" y="-3" size="0.87" layer="51" font="vector" ratio="10"/>
+<attribute name="NAME" x="28" y="-3.9" size="1.2" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="27.8" y="-5.2" size="1.2" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="R4" library="quadparts_prebuilt" package="RESC2012X60_HS" value="100" x="0" y="35.5" rot="R90">
+<element name="R4" library="quadparts_prebuilt" package="RESC2012X60_HS" value="100" x="0" y="35.5" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="311-100ARCT-ND" x="0" y="35.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Yageo" x="0" y="35.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="0" y="35.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="RC0805JR-07100RL" x="0" y="35.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="0" y="35.5" size="0.87" layer="51" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="-0.8" y="36.9" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="-0.9" y="33.2" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="R5" library="quadparts_prebuilt" package="RESC2012X60_HS" value="330" x="-18.853553125" y="1.24644375" rot="R45">
+<element name="R5" library="quadparts_prebuilt" package="RESC2012X60_HS" value="330" x="-18.853553125" y="1.24644375" smashed="yes" rot="R45">
 <attribute name="DISTPN" value="311-330ARCT-ND" x="-18.853553125" y="1.24644375" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MFR" value="Yageo" x="-18.853553125" y="1.24644375" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="DIST" value="Digikey" x="-18.853553125" y="1.24644375" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MPN" value="RC0805JR-07330RL" x="-18.853553125" y="1.24644375" size="1.778" layer="27" rot="R45" display="off"/>
+<attribute name="NAME" x="-18.853553125" y="1.24644375" size="0.87" layer="51" font="vector" ratio="10" rot="R45"/>
+<attribute name="NAME" x="-21.553553125" y="2.14644375" size="1.2" layer="25" font="vector" ratio="10" rot="R45"/>
+<attribute name="VALUE" x="-20.653553125" y="1.04644375" size="1.2" layer="27" font="vector" ratio="10" rot="R45"/>
 </element>
-<element name="R6" library="quadparts_prebuilt" package="RESC2012X60_HS" value="330" x="-17" y="-0.6" rot="R45">
+<element name="R6" library="quadparts_prebuilt" package="RESC2012X60_HS" value="330" x="-17" y="-0.6" smashed="yes" rot="R45">
 <attribute name="DISTPN" value="311-330ARCT-ND" x="-17" y="-0.6" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MFR" value="Yageo" x="-17" y="-0.6" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="DIST" value="Digikey" x="-17" y="-0.6" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MPN" value="RC0805JR-07330RL" x="-17" y="-0.6" size="1.778" layer="27" rot="R45" display="off"/>
+<attribute name="NAME" x="-17" y="-0.6" size="0.87" layer="51" font="vector" ratio="10" rot="R45"/>
+<attribute name="NAME" x="-16.1" y="-3" size="1.2" layer="25" font="vector" ratio="10" rot="R45"/>
+<attribute name="VALUE" x="-15.2" y="-4" size="1.2" layer="27" font="vector" ratio="10" rot="R45"/>
 </element>
-<element name="R7" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="3" y="31.5" rot="R90">
+<element name="R7" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="3" y="31.5" smashed="yes" rot="R90">
 <attribute name="DISTPN" value="311-10KARCT-ND" x="3" y="31.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFR" value="Yageo" x="3" y="31.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="DIST" value="Digikey" x="3" y="31.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="RC0805JR-0710KL" x="3" y="31.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="3" y="31.5" size="0.87" layer="51" font="vector" ratio="10" rot="R90"/>
+<attribute name="NAME" x="2.9" y="27" size="1.2" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="4.2" y="26.5" size="1.2" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="R8" library="quadparts_prebuilt" package="RESC2012X60_HS" value="100" x="0.5" y="-35.5" rot="R270">
+<element name="R8" library="quadparts_prebuilt" package="RESC2012X60_HS" value="100" x="0.5" y="-35.5" smashed="yes" rot="R270">
 <attribute name="DISTPN" value="311-100ARCT-ND" x="0.5" y="-35.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFR" value="Yageo" x="0.5" y="-35.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIST" value="Digikey" x="0.5" y="-35.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="RC0805JR-07100RL" x="0.5" y="-35.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="0.5" y="-35.5" size="0.87" layer="51" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="-0.8" y="-37.3" size="1.2" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="0.5" y="-36.7" size="1.2" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="R9" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="-2.5" y="-32" rot="R270">
+<element name="R9" library="quadparts_prebuilt" package="RESC2012X60_HS" value="10K" x="-2.5" y="-32" smashed="yes" rot="R270">
 <attribute name="DISTPN" value="311-10KARCT-ND" x="-2.5" y="-32" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFR" value="Yageo" x="-2.5" y="-32" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIST" value="Digikey" x="-2.5" y="-32" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="RC0805JR-0710KL" x="-2.5" y="-32" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="-2.5" y="-32" size="0.87" layer="51" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="-3.8" y="-28.3" size="1.2" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="-2.5" y="-27.2" size="1.2" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="U$1" library="quadparts_prebuilt" package="MOTOR_PADS" value="MOTOR_PADS" x="45.5" y="0.5" rot="R270">
+<element name="U$1" library="quadparts_prebuilt" package="MOTOR_PADS" value="MOTOR_PADS" x="45.5" y="0.5" smashed="yes" rot="R270">
 <attribute name="DISTPN" value="NA" x="45.5" y="0.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFR" value="NA" x="45.5" y="0.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIST" value="NA" x="45.5" y="0.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="NA" x="45.5" y="0.5" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U$2" library="quadparts_prebuilt" package="MOTOR_PADS" value="MOTOR_PADS" x="-0.5" y="46">
+<element name="U$2" library="quadparts_prebuilt" package="MOTOR_PADS" value="MOTOR_PADS" x="-0.5" y="46" smashed="yes">
 <attribute name="DISTPN" value="NA" x="-0.5" y="46" size="1.778" layer="27" display="off"/>
 <attribute name="MFR" value="NA" x="-0.5" y="46" size="1.778" layer="27" display="off"/>
 <attribute name="DIST" value="NA" x="-0.5" y="46" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="NA" x="-0.5" y="46" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U$3" library="quadparts_prebuilt" package="MOTOR_PADS" value="MOTOR_PADS" x="0.5" y="-46" rot="R180">
+<element name="U$3" library="quadparts_prebuilt" package="MOTOR_PADS" value="MOTOR_PADS" x="0.5" y="-46" smashed="yes" rot="R180">
 <attribute name="DISTPN" value="NA" x="0.5" y="-46" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR" value="NA" x="0.5" y="-46" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIST" value="NA" x="0.5" y="-46" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="NA" x="0.5" y="-46" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U$4" library="quadparts_prebuilt" package="MOTOR_PADS" value="MOTOR_PADS" x="-46.5" y="-0.5" rot="R90">
-<attribute name="DISTPN" value="NA" x="-46.5" y="-0.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFR" value="NA" x="-46.5" y="-0.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIST" value="NA" x="-46.5" y="-0.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="NA" x="-46.5" y="-0.5" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="U$4" library="quadparts_prebuilt" package="MOTOR_PADS" value="MOTOR_PADS" x="-46.2" y="-0.5" smashed="yes" rot="R90">
+<attribute name="DISTPN" value="NA" x="-46.2" y="-0.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFR" value="NA" x="-46.2" y="-0.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIST" value="NA" x="-46.2" y="-0.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="NA" x="-46.2" y="-0.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="U$5" library="quadparts" package="NET_BRIDGE" value="NET_BRIDGE" x="11.5" y="-9.2" rot="R135">
 <attribute name="DISTPN" value="''" x="11.5" y="-9.2" size="1.778" layer="27" rot="R135" display="off"/>
@@ -4091,13 +4249,15 @@ design rules under a new name.</description>
 <attribute name="CREATOR" value="BRIAN" x="11.5" y="-9.2" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="MPN" value="''" x="11.5" y="-9.2" size="1.778" layer="27" rot="R135" display="off"/>
 </element>
-<element name="U$6" library="quadparts_prebuilt" package="SOT23-DBV" value="LP3985" x="5.707109375" y="-21.70710625" rot="R135">
+<element name="U$6" library="quadparts_prebuilt" package="SOT23-DBV" value="LP3985" x="5.707109375" y="-21.70710625" smashed="yes" rot="R135">
 <attribute name="DISTPN" value="LP3985IM5X-3.0/NOPBCT-ND" x="5.707109375" y="-21.70710625" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="MFR" value="Texas Instruments" x="5.707109375" y="-21.70710625" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="PRICE" value="0.59" x="5.707109375" y="-21.70710625" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="DATASHEET" value="http://www.ti.com/lit/ds/symlink/lp3985.pdf" x="5.707109375" y="-21.70710625" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="DIST" value="Digikey" x="5.707109375" y="-21.70710625" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="MPN" value="LP3985IM5X-3.0/NOPB" x="5.707109375" y="-21.70710625" size="1.778" layer="27" rot="R135" display="off"/>
+<attribute name="VALUE" x="8.315259375" y="-23.235396875" size="1.27" layer="27" font="vector" rot="R225" align="center"/>
+<attribute name="NAME" x="3.794075" y="-19.6142125" size="1.27" layer="25" font="vector" rot="R225" align="center"/>
 </element>
 <element name="U2" library="quadparts_prebuilt" package="QFN-64" value="ATMEGA128RFA1" x="6.4" y="18.35" rot="R180">
 <attribute name="DISTPN" value="ATMEGA128RFA1-ZUR00DKR-ND" x="6.4" y="18.35" size="1.778" layer="27" rot="R180" display="off"/>
@@ -4177,10 +4337,10 @@ design rules under a new name.</description>
 <vertex x="6" y="0"/>
 </polygon>
 <polygon width="0.2" layer="1">
-<vertex x="15" y="25"/>
-<vertex x="25.1" y="25"/>
-<vertex x="25.1" y="13"/>
-<vertex x="15" y="13"/>
+<vertex x="15.5" y="24.5"/>
+<vertex x="25" y="24.5"/>
+<vertex x="24.8" y="13.5"/>
+<vertex x="15.5" y="13.5"/>
 </polygon>
 <polygon width="0.3" layer="1">
 <vertex x="-1.75" y="2.55"/>
@@ -4358,12 +4518,10 @@ design rules under a new name.</description>
 <wire x1="18.9" y1="12.1" x2="18.9" y2="13.725" width="0.1524" layer="1"/>
 <wire x1="18.9" y1="13.725" x2="18.875" y2="13.75" width="0.1524" layer="1"/>
 <polygon width="0.2" layer="2">
-<vertex x="15.3" y="24.9"/>
-<vertex x="25" y="24.9"/>
-<vertex x="25" y="14"/>
-<vertex x="25" y="13.2"/>
-<vertex x="15.2" y="13.2"/>
-<vertex x="15.2" y="24.9"/>
+<vertex x="15.5" y="24.5"/>
+<vertex x="25" y="24.5"/>
+<vertex x="24.8" y="13.5"/>
+<vertex x="15.5" y="13.5"/>
 </polygon>
 </signal>
 <signal name="N$3">
@@ -4376,12 +4534,10 @@ design rules under a new name.</description>
 <wire x1="12.875" y1="6.625" x2="12.85" y2="6.65" width="0.1524" layer="1"/>
 <wire x1="6.65" y1="13.469" x2="6.65" y2="12.55" width="0.1524" layer="1"/>
 <wire x1="6.65" y1="12.55" x2="7.6" y2="11.6" width="0.1524" layer="1"/>
-<wire x1="7.6" y1="11.6" x2="7.8" y2="11.6" width="0.1524" layer="1"/>
-<via x="7.8" y="11.6" extent="1-16" drill="0.6" diameter="0.6096"/>
-<wire x1="7.8" y1="11.6" x2="7.8" y2="8.7" width="0.1524" layer="16"/>
-<via x="7.8" y="8.7" extent="1-16" drill="0.6" diameter="0.6096"/>
 <wire x1="7.8" y1="8.7" x2="10.8" y2="8.7" width="0.1524" layer="1"/>
 <wire x1="10.8" y1="8.7" x2="12.85" y2="6.65" width="0.1524" layer="1"/>
+<wire x1="7.6" y1="11.6" x2="7.6" y2="8.9" width="0.1524" layer="1"/>
+<wire x1="7.6" y1="8.9" x2="7.8" y2="8.7" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="C6" pad="1"/>
@@ -4393,11 +4549,8 @@ design rules under a new name.</description>
 <wire x1="9.25" y1="4.25" x2="9.15" y2="4.35" width="0.1524" layer="1"/>
 <wire x1="6.15" y1="13.469" x2="6.15" y2="11.85" width="0.1524" layer="1"/>
 <wire x1="6.15" y1="11.85" x2="6.5" y2="11.6" width="0.1524" layer="1"/>
-<via x="6.5" y="11.6" extent="1-16" drill="0.6" diameter="0.6096"/>
-<wire x1="6.5" y1="11.6" x2="6.5" y2="8.7" width="0.1524" layer="16"/>
-<via x="6.5" y="8.7" extent="1-16" drill="0.6" diameter="0.6096"/>
-<wire x1="6.5" y1="8.7" x2="6.5" y2="7" width="0.1524" layer="1"/>
 <wire x1="6.5" y1="7" x2="9.15" y2="4.35" width="0.1524" layer="1"/>
+<wire x1="6.5" y1="11.6" x2="6.5" y2="7" width="0.1524" layer="1"/>
 </signal>
 <signal name="DVDD">
 <contactref element="C2" pad="1"/>
@@ -4521,25 +4674,33 @@ design rules under a new name.</description>
 <contactref element="U2" pad="47"/>
 <contactref element="JP1" pad="RXI"/>
 <wire x1="0.125" y1="15" x2="1.5" y2="15" width="0.1524" layer="1"/>
-<wire x1="4.875" y1="10.25" x2="0.125" y2="15" width="0.1524" layer="16"/>
-<wire x1="4.875" y1="-22.75" x2="4.875" y2="10.25" width="0.1524" layer="16"/>
+<wire x1="4.875" y1="-22.75" x2="4.875" y2="6.35" width="0.1524" layer="16"/>
 <wire x1="14.625" y1="-32.5" x2="4.875" y2="-22.75" width="0.1524" layer="16"/>
 <wire x1="1.5" y1="15" x2="1.519" y2="15.1" width="0.1524" layer="1"/>
 <wire x1="14.625" y1="-32.5" x2="14.730221875" y2="-32.616615625" width="0.1524" layer="16"/>
 <via x="0.125" y="15" extent="1-16" drill="0.381"/>
+<wire x1="0.125" y1="15" x2="0.125" y2="13.975" width="0.1524" layer="16"/>
+<wire x1="0.125" y1="13.975" x2="1.2" y2="12.9" width="0.1524" layer="16"/>
+<wire x1="1.2" y1="12.9" x2="2.2" y2="12.9" width="0.1524" layer="16"/>
+<wire x1="2.2" y1="12.9" x2="2.7" y2="12.2" width="0.1524" layer="16"/>
+<wire x1="2.7" y1="12.2" x2="2.7" y2="8.625" width="0.1524" layer="16"/>
+<wire x1="2.7" y1="8.625" x2="4.875" y2="6.35" width="0.1524" layer="16"/>
 </signal>
 <signal name="RX0">
 <contactref element="U2" pad="46"/>
 <contactref element="JP1" pad="TXO"/>
 <wire x1="2.375" y1="15.5" x2="1.625" y2="15.5" width="0.1524" layer="1"/>
 <wire x1="3" y1="14.875" x2="2.375" y2="15.5" width="0.1524" layer="1"/>
-<wire x1="5.75" y1="12.125" x2="3" y2="14.875" width="0.1524" layer="16"/>
-<wire x1="5.75" y1="-4.25" x2="5.75" y2="12.125" width="0.1524" layer="16"/>
-<wire x1="16.75" y1="-15.25" x2="5.75" y2="-4.25" width="0.1524" layer="16"/>
+<wire x1="5.45" y1="-3.85" x2="5.45" y2="6.725" width="0.1524" layer="16"/>
+<wire x1="16.75" y1="-15.25" x2="5.45" y2="-3.85" width="0.1524" layer="16"/>
 <wire x1="16.75" y1="-31.125" x2="16.75" y2="-15.25" width="0.1524" layer="16"/>
 <wire x1="1.625" y1="15.5" x2="1.519" y2="15.6" width="0.1524" layer="1"/>
 <wire x1="16.75" y1="-31.125" x2="16.86044375" y2="-31.23323125" width="0.1524" layer="16"/>
 <via x="3" y="14.875" extent="1-16" drill="0.381"/>
+<wire x1="3" y1="14.875" x2="3.025" y2="14.875" width="0.1524" layer="16"/>
+<wire x1="3.025" y1="14.875" x2="3.2" y2="14.7" width="0.1524" layer="16"/>
+<wire x1="3.2" y1="14.7" x2="3.2" y2="8.975" width="0.1524" layer="16"/>
+<wire x1="3.2" y1="8.975" x2="5.45" y2="6.725" width="0.1524" layer="16"/>
 </signal>
 <signal name="PD7">
 <contactref element="U2" pad="32"/>
@@ -4782,11 +4943,8 @@ design rules under a new name.</description>
 <vertex x="25" y="40"/>
 </polygon>
 <via x="-13.4" y="-25" extent="1-16" drill="0.6" diameter="0.6096"/>
-<via x="-22.1" y="-17.3" extent="1-16" drill="0.6" diameter="0.6096"/>
-<via x="22.2" y="-17.3" extent="1-16" drill="0.6" diameter="0.6096"/>
 <via x="-25" y="14.4" extent="1-16" drill="0.6" diameter="0.6096"/>
 <via x="-8" y="27.9" extent="1-16" drill="0.6" diameter="0.6096"/>
-<via x="24.2" y="11.9" extent="1-16" drill="0.6" diameter="0.6096"/>
 <wire x1="-0.75" y1="-1.75" x2="-1" y2="-1.75" width="0.1524" layer="1"/>
 <wire x1="-1" y1="-1.75" x2="-1.075" y2="-1.725" width="0.1524" layer="1"/>
 <wire x1="-0.75" y1="-1.75" x2="-0.645" y2="-1.725" width="0.1524" layer="1"/>
@@ -4806,9 +4964,6 @@ design rules under a new name.</description>
 <wire x1="-4.5" y1="-0.875" x2="-4.5" y2="-0.5" width="0.1524" layer="1"/>
 <wire x1="-2" y1="0.25" x2="-1.975" y2="0.215" width="0.1524" layer="1"/>
 <wire x1="-4.5" y1="-1.75" x2="-4.605" y2="-1.8" width="0.1524" layer="1"/>
-<wire x1="-2.125" y1="-0.875" x2="-2" y2="-0.75" width="0.1524" layer="1"/>
-<wire x1="-4.5" y1="-0.875" x2="-2.125" y2="-0.875" width="0.1524" layer="1"/>
-<wire x1="-2" y1="-0.75" x2="-1.975" y2="-0.645" width="0.1524" layer="1"/>
 <wire x1="-0.25" y1="1.75" x2="-0.625" y2="1.75" width="0.1524" layer="1"/>
 <wire x1="-0.25" y1="1.75" x2="-0.215" y2="1.725" width="0.1524" layer="1"/>
 <wire x1="-4.5" y1="4.75" x2="-3.25" y2="3.5" width="0.1524" layer="1"/>
@@ -4839,7 +4994,6 @@ design rules under a new name.</description>
 <wire x1="2.875" y1="18.75" x2="2.875" y2="21.25" width="0.1524" layer="16"/>
 <wire x1="1.625" y1="21.625" x2="1.519" y2="21.6" width="0.1524" layer="1"/>
 <wire x1="-0.625" y1="5.75" x2="-0.625" y2="5.375" width="0.1524" layer="1"/>
-<wire x1="-0.5" y1="5.875" x2="-0.625" y2="5.75" width="0.1524" layer="16"/>
 <wire x1="12" y1="27.25" x2="12.5" y2="27.75" width="0.1524" layer="1"/>
 <wire x1="8.125" y1="27.25" x2="12" y2="27.25" width="0.1524" layer="1"/>
 <wire x1="7.25" y1="26.375" x2="8.125" y2="27.25" width="0.1524" layer="1"/>
@@ -4877,7 +5031,6 @@ design rules under a new name.</description>
 <via x="-0.625" y="5.75" extent="1-16" drill="0.381"/>
 <via x="7.25" y="24.625" extent="1-16" drill="0.381"/>
 <wire x1="2.875" y1="18.75" x2="-0.5" y2="15.375" width="0.1524" layer="16"/>
-<wire x1="-0.5" y1="5.875" x2="-0.5" y2="10.1" width="0.1524" layer="16"/>
 <via x="-1.4" y="11.6" extent="1-16" drill="0.381"/>
 <wire x1="-1.4" y1="11.6" x2="0.5" y2="11.6" width="0.1524" layer="1"/>
 <via x="0.5" y="11.6" extent="1-16" drill="0.381"/>
@@ -4885,8 +5038,12 @@ design rules under a new name.</description>
 <wire x1="0.3" y1="13.2" x2="-0.9" y2="14.4" width="0.1524" layer="16"/>
 <wire x1="-0.9" y1="14.4" x2="-0.9" y2="15" width="0.1524" layer="16"/>
 <wire x1="-0.9" y1="15" x2="-0.5" y2="15.4" width="0.1524" layer="16"/>
-<wire x1="-1.4" y1="11.6" x2="-1.4" y2="11" width="0.1524" layer="16"/>
-<wire x1="-1.4" y1="11" x2="-0.5" y2="10.1" width="0.1524" layer="16"/>
+<wire x1="-4.5" y1="-0.875" x2="-3.2" y2="-0.875" width="0.1524" layer="1"/>
+<wire x1="-3.2" y1="-0.875" x2="-3.2" y2="-1.6" width="0.1524" layer="1"/>
+<wire x1="-3.2" y1="-1.6" x2="-1.505" y2="-1.6" width="0.1524" layer="1"/>
+<wire x1="-1.505" y1="-1.6" x2="-1.505" y2="-1.725" width="0.1524" layer="1"/>
+<wire x1="-1.4" y1="11.6" x2="-1.4" y2="6.525" width="0.1524" layer="16"/>
+<wire x1="-1.4" y1="6.525" x2="-0.625" y2="5.75" width="0.1524" layer="16"/>
 </signal>
 <signal name="FLYBACK_BR" class="2">
 <contactref element="D3" pad="A"/>
@@ -4929,11 +5086,8 @@ design rules under a new name.</description>
 <wire x1="0.5" y1="-31.875" x2="0.5" y2="-31.895" width="0.1524" layer="1"/>
 <via x="1.625" y="-31.125" extent="1-16" drill="0.381"/>
 <via x="2" y="12" extent="1-16" drill="0.381"/>
-<wire x1="2" y1="12" x2="4.4" y2="9.6" width="0.1524" layer="16"/>
-<wire x1="4.4" y1="9.6" x2="4.4" y2="6.7" width="0.1524" layer="16"/>
-<wire x1="4.4" y1="6.7" x2="4.3" y2="6.6" width="0.1524" layer="16"/>
-<wire x1="4.3" y1="6.6" x2="4.3" y2="-11.8" width="0.1524" layer="16"/>
-<wire x1="4.3" y1="-11.8" x2="2.9" y2="-11.8" width="0.1524" layer="16"/>
+<wire x1="4.2" y1="6.4" x2="4.2" y2="-10.4" width="0.1524" layer="16"/>
+<wire x1="4.2" y1="-10.4" x2="2.9" y2="-11.8" width="0.1524" layer="16"/>
 <wire x1="2.9" y1="-11.8" x2="1.7" y2="-13" width="0.1524" layer="16"/>
 <wire x1="1.7" y1="-13" x2="1.7" y2="-20.9" width="0.1524" layer="16"/>
 <wire x1="1.7" y1="-20.9" x2="0.4" y2="-22.2" width="0.1524" layer="16"/>
@@ -4941,6 +5095,8 @@ design rules under a new name.</description>
 <wire x1="0.4" y1="-28.4" x2="0.8" y2="-28.8" width="0.1524" layer="16"/>
 <wire x1="0.8" y1="-28.8" x2="2" y2="-28.8" width="0.1524" layer="16"/>
 <wire x1="2" y1="-28.8" x2="2" y2="-30.75" width="0.1524" layer="16"/>
+<wire x1="2" y1="12" x2="1.9" y2="8.7" width="0.1524" layer="16"/>
+<wire x1="1.9" y1="8.7" x2="4.2" y2="6.4" width="0.1524" layer="16"/>
 </signal>
 <signal name="FLYBACK_TL" class="2">
 <contactref element="D2" pad="A"/>
@@ -5032,23 +5188,27 @@ design rules under a new name.</description>
 <via x="-12.95" y="10.975" extent="1-16" drill="0.381"/>
 <via x="31.125" y="1.375" extent="1-16" drill="0.381"/>
 <via x="18.275" y="10.875" extent="1-16" drill="0.381"/>
-<wire x1="3.625" y1="10.875" x2="5.125" y2="10.875" width="0.1524" layer="1"/>
-<wire x1="5.125" y1="10.875" x2="5.5" y2="10.5" width="0.1524" layer="1"/>
-<wire x1="5.5" y1="10.5" x2="8.8" y2="10.5" width="0.1524" layer="1"/>
-<wire x1="8.8" y1="10.5" x2="9.2" y2="10.9" width="0.1524" layer="1"/>
 <wire x1="9.2" y1="10.9" x2="12" y2="10.9" width="0.1524" layer="1"/>
 <wire x1="12" y1="10.9" x2="12.3" y2="11.2" width="0.1524" layer="1"/>
 <wire x1="12.3" y1="11.2" x2="13.5" y2="11.2" width="0.1524" layer="1"/>
 <wire x1="13.5" y1="11.2" x2="13.8" y2="10.9" width="0.1524" layer="1"/>
 <wire x1="13.8" y1="10.9" x2="18.25" y2="10.9" width="0.1524" layer="1"/>
 <wire x1="18.25" y1="10.9" x2="18.275" y2="10.875" width="0.1524" layer="1"/>
+<wire x1="3.625" y1="10.875" x2="4.075" y2="10.875" width="0.1524" layer="1"/>
+<wire x1="4.075" y1="10.875" x2="4.5" y2="11.3" width="0.1524" layer="1"/>
+<wire x1="4.5" y1="11.3" x2="5.1" y2="11.3" width="0.1524" layer="1"/>
+<via x="5.1" y="11.3" extent="1-16" drill="0.381"/>
+<wire x1="5.1" y1="11.3" x2="8.4" y2="11.3" width="0.1524" layer="16"/>
+<via x="8.4" y="11.3" extent="1-16" drill="0.381"/>
+<wire x1="8.4" y1="11.3" x2="8.8" y2="11.3" width="0.1524" layer="1"/>
+<wire x1="8.8" y1="11.3" x2="9.2" y2="10.9" width="0.1524" layer="1"/>
 </signal>
 <signal name="FLYBACK_BL" class="2">
 <contactref element="D4" pad="A"/>
 <contactref element="U$4" pad="V-"/>
 <contactref element="Q4" pad="D"/>
 <wire x1="-42.125" y1="1.5" x2="-42" y2="1.625" width="0.4572" layer="1"/>
-<wire x1="-46.5" y1="1.5" x2="-42.125" y2="1.5" width="0.4572" layer="1"/>
+<wire x1="-46.2" y1="1.5" x2="-42.125" y2="1.5" width="0.4572" layer="1"/>
 <wire x1="-42" y1="1.625" x2="-42" y2="1.665" width="0.4572" layer="1"/>
 <wire x1="-40.375" y1="1.75" x2="-37.625" y2="4.5" width="0.4572" layer="1"/>
 <wire x1="-41.875" y1="1.75" x2="-40.375" y2="1.75" width="0.4572" layer="1"/>
@@ -5158,7 +5318,7 @@ design rules under a new name.</description>
 <wire x1="7.375" y1="-21.375" x2="7.298096875" y2="-21.45961875" width="0.4572" layer="1"/>
 <wire x1="7.125" y1="-17.75" x2="6.9671375" y2="-17.8671375" width="0.4572" layer="1"/>
 <wire x1="-42.125" y1="-1.5" x2="-42" y2="-1.625" width="0.4572" layer="1"/>
-<wire x1="-46.5" y1="-1.5" x2="-42.125" y2="-1.5" width="0.4572" layer="1"/>
+<wire x1="-46.2" y1="-1.5" x2="-42.125" y2="-1.5" width="0.4572" layer="1"/>
 <wire x1="-42" y1="-1.625" x2="-42" y2="-1.665" width="0.4572" layer="1"/>
 <wire x1="1.625" y1="-46" x2="1.625" y2="-42" width="0.4572" layer="1"/>
 <wire x1="1.5" y1="-46" x2="1.625" y2="-46" width="0.4572" layer="1"/>
@@ -5420,9 +5580,13 @@ design rules under a new name.</description>
 <wire x1="15.4" y1="7.7" x2="14.1" y2="9" width="0.4572" layer="1"/>
 <wire x1="14.1" y1="9" x2="11.9" y2="9" width="0.4572" layer="1"/>
 <wire x1="11.9" y1="9" x2="11.1" y2="9.8" width="0.4572" layer="1"/>
-<wire x1="11.1" y1="9.8" x2="-29.3" y2="9.8" width="0.4572" layer="1"/>
 <wire x1="-29.3" y1="9.8" x2="-29.6606625" y2="9.4393375" width="0.4572" layer="1"/>
 <wire x1="-29.6606625" y1="9.4393375" x2="-30.353553125" y2="9.4393375" width="0.4572" layer="1"/>
+<wire x1="-29.3" y1="9.8" x2="5.1" y2="9.8" width="0.4572" layer="1"/>
+<via x="5.1" y="9.8" extent="1-16" drill="0.6"/>
+<wire x1="5.1" y1="9.8" x2="9.2" y2="9.8" width="0.4572" layer="16"/>
+<via x="9.2" y="9.8" extent="1-16" drill="0.6"/>
+<wire x1="9.2" y1="9.8" x2="11.1" y2="9.8" width="0.4572" layer="1"/>
 </signal>
 <signal name="N$10" class="2">
 <contactref element="Q7" pad="D"/>
@@ -5447,16 +5611,15 @@ design rules under a new name.</description>
 <wire x1="15.4069625" y1="33.7930375" x2="16.051840625" y2="33.7930375" width="0.4572" layer="1"/>
 <wire x1="-1.475" y1="23.625" x2="-1.5" y2="23.6" width="0.4572" layer="16"/>
 <wire x1="-1.5" y1="23.6" x2="-1.5" y2="12.5" width="0.4572" layer="16"/>
-<wire x1="3.6" y1="7.2" x2="3.6" y2="-9.5" width="0.4572" layer="16"/>
+<wire x1="3.6" y1="6.2" x2="3.6" y2="-9.5" width="0.4572" layer="16"/>
 <wire x1="3.6" y1="-9.5" x2="0.8" y2="-12.3" width="0.4572" layer="16"/>
 <wire x1="0.8" y1="-12.3" x2="0.8" y2="-17.8" width="0.4572" layer="16"/>
 <wire x1="0.8" y1="-17.8" x2="-1.65" y2="-20.25" width="0.4572" layer="16"/>
 <wire x1="-1.65" y1="-20.25" x2="-1.675" y2="-20.25" width="0.4572" layer="16"/>
 <wire x1="-1.5" y1="12.5" x2="-0.5" y2="12.5" width="0.4572" layer="16"/>
-<wire x1="-0.5" y1="12.5" x2="-0.5" y2="11" width="0.4572" layer="16"/>
-<wire x1="-0.5" y1="11" x2="0.3" y2="10.2" width="0.4572" layer="16"/>
-<wire x1="0.3" y1="10.2" x2="0.6" y2="10.2" width="0.4572" layer="16"/>
-<wire x1="0.6" y1="10.2" x2="3.6" y2="7.2" width="0.4572" layer="16"/>
+<wire x1="-0.5" y1="12.5" x2="-0.5" y2="7.6" width="0.4572" layer="16"/>
+<wire x1="-0.5" y1="7.6" x2="2.2" y2="7.6" width="0.4572" layer="16"/>
+<wire x1="2.2" y1="7.6" x2="3.6" y2="6.2" width="0.4572" layer="16"/>
 </signal>
 <signal name="N$11" class="2">
 <contactref element="R19" pad="P$2"/>
@@ -5535,6 +5698,22 @@ design rules under a new name.</description>
 <vertex x="1.35" y="-24.45"/>
 <vertex x="2.4" y="-23.35"/>
 <vertex x="3.55" y="-23.25"/>
+</polygon>
+</signal>
+<signal name="FGND">
+<polygon width="0.1524" layer="1">
+<vertex x="-14.1" y="70.4"/>
+<vertex x="-14.1" y="48.6"/>
+<vertex x="16.4" y="48.6"/>
+<vertex x="16.4" y="70.4"/>
+</polygon>
+<via x="-7.6" y="67.5" extent="1-16" drill="0.381"/>
+<via x="7.5" y="67.5" extent="1-16" drill="0.381"/>
+<polygon width="0.1524" layer="16">
+<vertex x="-14.1" y="70.4"/>
+<vertex x="-14.1" y="48.6"/>
+<vertex x="16.4" y="48.6"/>
+<vertex x="16.4" y="70.4"/>
 </polygon>
 </signal>
 </signals>
