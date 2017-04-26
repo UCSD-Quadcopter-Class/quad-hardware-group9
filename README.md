@@ -1,6 +1,6 @@
 # CSE 190 - QUAD-HARDWARE
 
-This repo stores all of the files used during the creation of the quadcopter's hardware design portion of the lab. The main schematic for the quadcopter is `quadcopter.sch`. The board file has not yet been created.
+This repo stores all of the files used during the creation of the quadcopter's hardware design portion of the lab. The main schematic for the quadcopter is `quadcopter.sch`. The board file is `quadcopter.brd`. Currently, the board only contains the general connections to all components of the quadcopter.
 
 ## What do the Directories Contain?
 
