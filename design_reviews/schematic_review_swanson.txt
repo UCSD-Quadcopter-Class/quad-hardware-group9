@@ -1,0 +1,23 @@
+Nice looking schematic!
+
+1 uF filter caps in motor controllers should be 0.1uF
+
+Your custom LEDS are all backwards.
+
+The pulldown on your custom LED driver is probably not necessary.  There's no harm it being high and they are just two more parts to place and solder.
+
+You don't need netbridge U$7.
+
+The ground on the input side of the voltage converter sohuld bat_gnd
+
+Your pullup resistors on SDA/SCL are too small.  Use 10kOhm.  At 330, it quite possible that the ucontroller and IMU will not be able to pull them low.
+
+A critical pin on your IMU is not connected.  Read the datasheet about what each pin does.
+
+
+
+
+
+
+
+
