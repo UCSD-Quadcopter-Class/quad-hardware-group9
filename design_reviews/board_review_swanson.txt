@@ -1,0 +1,23 @@
+
+commit 0e7116c90d4038d4aa8b29b739d38f4d02f9b5e5
+
+Holes for motors much too large.  Looks like you set the radius rather than the diameter.
+
+Arms to short.  Too much of prop over board
+
+BAT_GND is running all over Top.  IT should be using the BAT_GND plane.
+
+The package for the diodes in your motor controller is not right.  THe SMDs are too narrow.
+
+I'd but the jumper closer to the center of the board.
+
+you need separate ground pours.  One for BAT_GND and one for GND.  BAT_GND should be outher VBAT.  GND should be under 3V.
+
+Why is there pour on your top motor mount? It's attached to signal called FGND.  What's that?
+
+The layout of your oscillator needs to look more like the layout on the red board.
+
+
+
+
+
