@@ -9,7 +9,7 @@ BAT_GND is running all over Top.  IT should be using the BAT_GND plane.
 
 The package for the diodes in your motor controller is not right.  THe SMDs are too narrow.
 
-I'd but the jumper closer to the center of the board.
+I'd but the jumper closer to the center of the board.  This will make the wire between the BAT terminal and the jumper shorter.  You can do even better by running your VBAT pour up to the jumper and putting the jumper right next to the battery.
 
 you need separate ground pours.  One for BAT_GND and one for GND.  BAT_GND should be outher VBAT.  GND should be under 3V.
 
@@ -17,7 +17,6 @@ Why is there pour on your top motor mount? It's attached to signal called FGND. 
 
 The layout of your oscillator needs to look more like the layout on the red board.
 
+Decouplig caps for IMU and uctrl are too far away.
 
-
-
-
+Why the ground pour under the power regulator?
