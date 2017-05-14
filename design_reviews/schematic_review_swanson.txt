@@ -14,7 +14,7 @@ Your pullup resistors on SDA/SCL are too small.  Use 10kOhm.  At 330, it quite p
 
 A critical pin on your IMU is not connected.  Read the datasheet about what each pin does.
 
-
+You are missing two decoupling caps for the micro controller.
 
 
 
