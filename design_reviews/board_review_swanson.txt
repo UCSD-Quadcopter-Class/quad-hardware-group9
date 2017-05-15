@@ -2,21 +2,38 @@
 commit 0e7116c90d4038d4aa8b29b739d38f4d02f9b5e5
 
 Holes for motors much too large.  Looks like you set the radius rather than the diameter.
+SOLN: Has been fixed. Redoing the whole bard seemed drastic, so instead the entire
+      model was rotated 45 deg and the arms were extended as much as possible, and the
+      motor hole has been adjusted.
 
 Arms to short.  Too much of prop over board
+SOLN: See above.
 
 BAT_GND is running all over Top.  IT should be using the BAT_GND plane.
+SOLN: A BAT_GND plane was created to run under V_BAT now.
 
 The package for the diodes in your motor controller is not right.  THe SMDs are too narrow.
+SOLN: The package was edited and the SMD size was changed to the suggested size.
 
 I'd but the jumper closer to the center of the board.  This will make the wire between the BAT terminal and the jumper shorter.  You can do even better by running your VBAT pour up to the jumper and putting the jumper right next to the battery.
+SOLN: The jumper was moved and power/ground planes nearby were readjusted to reduce the amount of power
+      traces running around.
 
 you need separate ground pours.  One for BAT_GND and one for GND.  BAT_GND should be outher VBAT.  GND should be under 3V.
+SOLN: Separate pours were created for BAT_GND and GND.
 
 Why is there pour on your top motor mount? It's attached to signal called FGND.  What's that?
+SOLN: This was just a way of identifying the top of the motor at first (since it's not hard to spot the copper).
+      However, labels have been placed for the motor locations, so it was removed.
 
 The layout of your oscillator needs to look more like the layout on the red board.
+SOLN: I attempted to recreate the red board oscillator setup exactly.
 
 Decouplig caps for IMU and uctrl are too far away.
+SOLN: I tried to move the decoupling caps closer to the IMU and uC. But it's quite difficult to move many
+      caps near the IMU, so I tried my best to reduce the trace length.
 
 Why the ground pour under the power regulator?
+SOLN: The ground pour was there under the suggestion of the regulator spec sheet. It doesn't quite serve
+      its original purpose of reducing noise a little, however, since the BAT_GND and GND traces are separate.
+      I will remove it as required.
