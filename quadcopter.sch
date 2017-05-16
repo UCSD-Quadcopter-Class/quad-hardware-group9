@@ -4903,6 +4903,10 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <wire x1="-10.16" y1="-96.52" x2="-10.16" y2="-81.28" width="0.1524" layer="91"/>
 <junction x="-10.16" y="-81.28"/>
 <label x="-30.48" y="-81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="LSM9DS1" gate="G$1" pin="DEN_A/G"/>
+<wire x1="40.64" y1="-96.52" x2="48.26" y2="-96.52" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="-96.52" x2="48.26" y2="-109.22" width="0.1524" layer="91"/>
+<junction x="48.26" y="-109.22"/>
 </segment>
 </net>
 <net name="FLYBACK_BR" class="2">
